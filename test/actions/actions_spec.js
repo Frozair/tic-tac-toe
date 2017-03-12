@@ -3,10 +3,10 @@ import { expect } from 'chai';
 import * as Actions from '../../src/actions/actions';
 
 describe('Actions', () => {
-  describe('START_GAME', () => {
-    it('creates a START_GAME action', () => {
+  describe('NEW_GAME', () => {
+    it('creates a NEW_GAME action', () => {
       expect(Actions.startGame()).to.deep.equal({
-        type: 'START_GAME',
+        type: 'NEW_GAME',
         game: {
           grid: '---------',
           nextPlayer: 'O'
