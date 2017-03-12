@@ -1,12 +1,10 @@
 import * as types from '../constants/ActionTypes';
+import * as Game from '../constants/Game';
 
 export function startGame() {
   return {
     type: types.START_GAME,
-    game: {
-      grid: '---------',
-      nextPlayer: 'O'
-    }
+    game: Game.INITIAL_STATE
   };
 }
 
