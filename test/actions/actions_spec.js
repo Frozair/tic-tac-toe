@@ -18,15 +18,24 @@ describe('Actions', () => {
 
   describe('MOVE', () => {
     it('creates a MOVE action', () => {
-      expect(actions.move()).to.equal({
-        type: 'MOVE'
-      });
-    })
+      const meta = {
+        grid: '---------',
+        player: {
+          type: 'O',
+          position: 3
+        }
+      };
 
-    it('creates a WINNER action', () => {
-      expect(actions.move()).to.equal({
-        type: 'WINNER'
-      })
+      expect(actions.move(meta)).to.deep.equal({
+        type: 'MOVE',
+        game: {
+          grid: '---------',
+          player: {
+            type: 'O',
+            position: 3
+          }
+        }
+      });
     })
   })
 });
