@@ -8,13 +8,9 @@ export function newGame() {
   };
 }
 
-export function move(meta) {
-  const { grid, player }  = meta;
+export function move(player) {
   return {
     type: ActionTypes.MOVE,
-    game: {
-      grid,
-      player
-    }
+    player
   };
 }

@@ -17,22 +17,16 @@ describe('Actions', () => {
 
   describe('MOVE', () => {
     it('creates a MOVE action', () => {
-      const meta = {
-        grid: '---------',
+      const player = {
+        type: 'O',
+        position: 3
+      };
+
+      expect(Actions.move(player)).to.deep.equal({
+        type: 'MOVE',
         player: {
           type: 'O',
           position: 3
-        }
-      };
-
-      expect(Actions.move(meta)).to.deep.equal({
-        type: 'MOVE',
-        game: {
-          grid: '---------',
-          player: {
-            type: 'O',
-            position: 3
-          }
         }
       });
     })
