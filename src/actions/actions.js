@@ -1,9 +1,9 @@
-import * as types from '../constants/ActionTypes';
+import * as ActionTypes from '../constants/ActionTypes';
 import * as Game from '../constants/Game';
 
 export function startGame() {
   return {
-    type: types.START_GAME,
+    type: ActionTypes.NEW_GAME,
     game: Game.INITIAL_STATE
   };
 }
@@ -11,7 +11,7 @@ export function startGame() {
 export function move(meta) {
   const { grid, player }  = meta;
   return {
-    type: types.MOVE,
+    type: ActionTypes.MOVE,
     game: {
       grid,
       player
