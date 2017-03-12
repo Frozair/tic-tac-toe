@@ -1,12 +1,11 @@
-import { fromJS } from 'immutable';
 import { expect } from 'chai';
 
-import * as actions from '../../src/actions/actions';
+import * as Actions from '../../src/actions/actions';
 
 describe('Actions', () => {
   describe('START_GAME', () => {
     it('creates a START_GAME action', () => {
-      expect(actions.startGame()).to.deep.equal({
+      expect(Actions.startGame()).to.deep.equal({
         type: 'START_GAME',
         game: {
           grid: '---------',
@@ -26,7 +25,7 @@ describe('Actions', () => {
         }
       };
 
-      expect(actions.move(meta)).to.deep.equal({
+      expect(Actions.move(meta)).to.deep.equal({
         type: 'MOVE',
         game: {
           grid: '---------',
