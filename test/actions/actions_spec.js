@@ -5,7 +5,7 @@ import * as Actions from '../../src/actions/actions';
 describe('Actions', () => {
   describe('NEW_GAME', () => {
     it('creates a NEW_GAME action', () => {
-      expect(Actions.startGame()).to.deep.equal({
+      expect(Actions.newGame()).to.deep.equal({
         type: 'NEW_GAME',
         game: {
           grid: '---------',

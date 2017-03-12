@@ -1,7 +1,7 @@
 import * as ActionTypes from '../constants/ActionTypes';
 import * as Game from '../constants/Game';
 
-export function startGame() {
+export function newGame() {
   return {
     type: ActionTypes.NEW_GAME,
     game: Game.INITIAL_STATE

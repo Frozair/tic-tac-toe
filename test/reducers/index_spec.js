@@ -6,10 +6,10 @@ import * as Actions from '../../src/actions/actions'
 import * as Game from '../../src/constants/Game';
 
 describe('Reducer', () => {
-  describe('startGame', () => {
+  describe('newGame', () => {
     it('sets the state to the game INITIAL_STATE', () => {
       const initialState = Map();
-      const action = Actions.startGame();
+      const action = Actions.newGame();
       const nextState = reducer(initialState, action);
 
       expect(nextState).to.deep.equal(Game.INITIAL_STATE);
