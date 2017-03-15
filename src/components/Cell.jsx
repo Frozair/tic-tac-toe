@@ -11,9 +11,9 @@ export default class Cell extends React.Component {
 
   render() {
     return (
-      <div onClick={() => this.playerMove()}>
+      <span onClick={() => this.playerMove()}>
         {this.props.cell}
-      </div>
+      </span>
     );
   }
 }
