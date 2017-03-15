@@ -20,10 +20,25 @@ class Grid extends React.Component {
           nextPlayer={this.props.nextPlayer}
           move={this.props.move}/>
       )
+      if ((i + 1) % 3 === 0) {
+        cells.push(<br key={"br" + i} />);
+      }
     }
 
+    let meta = null;
+    if (this.props.winner && this.props.winner.player) {
+      meta = (
+        <div>
+          <div className="winner">Winner: {this.props.winner.player}</div>
+          <button className="new-game" onClick={() => this.props.newGame() }>Start New Game</button>
+        </div>
+      );
+    } else {
+      meta = <div className="current-player">Player Turn: {this.props.nextPlayer}</div>;
+    }
     return (
       <div>
+        {meta}
         {cells}
       </div>
     );
