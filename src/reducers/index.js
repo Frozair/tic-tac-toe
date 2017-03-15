@@ -1,6 +1,6 @@
 import * as Game from '../constants/Game';
 import * as Actions from '../constants/ActionTypes';
-import { List } from 'immutable';
+import { List, fromJS } from 'immutable';
 
 function move(state, player) {
   let grid = state.get('grid');
@@ -48,7 +48,7 @@ function winnerDetected(grid, lastPlayer) {
   return false;
 }
 
-export default function reducer(state = Game.INITIAL_STATE, action) {
+export default function reducer(state = fromJS(Game.INITIAL_STATE), action) {
   switch(action.type) {
     case Actions.NEW_GAME:
       return Game.INITIAL_STATE;
