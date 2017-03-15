@@ -12,7 +12,7 @@ describe('Reducer', () => {
       const action = Actions.newGame();
       const nextState = reducer(initialState, action);
 
-      expect(nextState).to.deep.equal(Game.INITIAL_STATE);
+      expect(nextState).to.deep.equal(fromJS(Game.INITIAL_STATE));
     })
   })
 

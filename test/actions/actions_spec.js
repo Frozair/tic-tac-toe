@@ -6,11 +6,7 @@ describe('Actions', () => {
   describe('NEW_GAME', () => {
     it('creates a NEW_GAME action', () => {
       expect(Actions.newGame()).to.deep.equal({
-        type: 'NEW_GAME',
-        game: {
-          grid: '---------',
-          nextPlayer: 'O'
-        }
+        type: 'NEW_GAME'
       })
     })
   })

@@ -51,7 +51,7 @@ function winnerDetected(grid, lastPlayer) {
 export default function reducer(state = fromJS(Game.INITIAL_STATE), action) {
   switch(action.type) {
     case Actions.NEW_GAME:
-      return Game.INITIAL_STATE;
+      return fromJS(Game.INITIAL_STATE);
     case Actions.MOVE:
         return move(state, action.player);
     default:
