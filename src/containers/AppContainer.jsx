@@ -13,14 +13,15 @@ class App extends React.Component {
         <Status
           newGame={this.props.newGame}
           winner={this.props.winner}
-          nextPlayer={this.props.nextPlayer} />
+          nextPlayer={this.props.nextPlayer}
+          draw={this.props.draw} />
         <Grid {...this.props}/>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {  
+function mapStateToProps(state) {
   return {
     nextPlayer: state.get('nextPlayer'),
     grid: state.get('grid'),

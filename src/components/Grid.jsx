@@ -7,7 +7,7 @@ export default class Grid extends React.Component {
     return this.props.grid || '';
   }
 
-  move(position) {    
+  move(position) {
     const player = {
       type: this.props.nextPlayer,
       position
@@ -23,14 +23,11 @@ export default class Grid extends React.Component {
           key={i}
           cell={this.getCells()[i]}
           move={() => this.move(i)}/>
-      )
-      if ((i + 1) % 3 === 0) {
-        cells.push(<br key={"br" + i} />);
-      }
+      );      
     }
 
     return (
-      <div>
+      <div id="grid-container">
         {cells}
       </div>
     );

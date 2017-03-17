@@ -1,11 +1,15 @@
 import React from 'react';
 
 export default class Cell extends React.Component {
+  value() {
+    return this.props.cell !== '-' ? this.props.cell : '';
+  }
+
   render() {
     return (
-      <span onClick={this.props.move}>
-        {this.props.cell}
-      </span>
+      <div className="cell" onClick={this.props.move}>
+        <p>{this.value()}</p>
+      </div>
     );
   }
 }

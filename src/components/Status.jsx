@@ -1,8 +1,20 @@
 import React from 'react';
 
 export default class Status extends React.Component {
-  hasWinner() {
-    return this.props.winner && this.props.winner.player;
+  gameEnded() {
+    return this.props.draw || (this.props.winner && this.props.winner.player);
+  }
+
+  endMessage() {
+    let message;
+
+    if (this.props.winner && this.props.winner.player) {
+      message = "Winner: " + this.props.winner.player;
+    } else {
+      message = "It's a draw!"
+    }
+
+    return message;
   }
 
   startNewGame() {
@@ -11,10 +23,10 @@ export default class Status extends React.Component {
 
   render() {
     let status = null;
-    if (this.hasWinner()) {
+    if (this.gameEnded()) {
       status = (
         <div>
-          <div className="winner">Winner: {this.props.winner.player}</div>
+          <div className="winner">{this.endMessage()}</div>
           <button className="new-game" onClick={() => this.startNewGame() }>Start New Game</button>
         </div>
       );
