@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  margin:30px;
+}
+
+#grid-container {
+
+}
+
+#status-container {
+
+}
+
+.cell {
+  width:30px;
+   height:50px;
+   padding:10px 20px;
+   outline:1px solid #bbb;
+   background:white;
+   float:left
+}
+
+.cell:nth-of-type(3n + 1) {
+    clear:left
+}
+
+.cell p {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+}
