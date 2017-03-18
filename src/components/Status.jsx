@@ -26,12 +26,12 @@ export default class Status extends React.Component {
     if (this.gameEnded()) {
       status = (
         <div>
-          <div className="winner">{this.endMessage()}</div>
+          <h1 className="winner">{this.endMessage()}</h1>
           <button className="new-game" onClick={() => this.startNewGame() }>Start New Game</button>
         </div>
       );
     } else {
-      status = <div className="current-player">Player Turn: {this.props.nextPlayer}</div>;
+      status = <h1 className="current-player">Player Turn: {this.props.nextPlayer}</h1>;
     }
     return (
       <div id="status-container">

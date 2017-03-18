@@ -6,11 +6,12 @@ body {
 }
 
 #grid-container {
-
+  width: 210px;
+  margin: 0 auto;
 }
 
 #status-container {
-
+  text-align: center;
 }
 
 .cell {
