@@ -1,4 +1,10 @@
 language: node_js
 node_js:
-  - "6"
-  - "5"
+- '6'
+- '5'
+deploy:
+  provider: heroku
+  buildpack: https://github.com/mars/create-react-app-buildpack.git
+  on: master
+  api_key:
+    secure: PYxryOk/OAxegMVVa3NMCGl/UUUNCrNhgrbL/LJx+eOmSpkpZ92Xx8MspYKQx7qlMmXADQD1WBDUi1aI0V2guECJ9q3fuOXY75kHB863CBtOa31g7n+gs+DZOYrxWcKQr5OG+KPXwluCjwRtd6YfNNDfKbEJezKzUXP3UlI7TM37yYjTpU9GDwiPQMdG9/KqYnro7Qilq8hQBnLrA0TRgwjP1WjPyFGv27KZmA3Ce66R+asBm0IGOZ8SL5Gsx/tujdUDKFHAAs/RUna/8oLuKNfrnAk6pOwMhcyn/K5/+Y2MjwwKxCbvY+TOyMIXZHWygGVzkLvBfe5vsoTngZImRwA53isXn8rWv+RMktFho5RSb79iIyACz7ZJx9eGeAXoW2Q4G0gQHg4S+p8ncZpam4fpWyrHMgMKcKnl5MddZOTGPtNpS07l01lIG78wSM4Olb+6mNxRJjDCYQk2g9YvB670iJAuzVCUuBS+ACmX2VxZZw75vNeZvZtGKUbhl98qkXGHiiwJnRSReiKiCNFuiLx/sdQvTjJGslC5jrjfAaQodEHhxIW0DIISKba+ZSKbM4VYO5VS/u9KPTQbO7OErx8i17wtG6uf77cCoJyntTFMmPVONhpsDhjVJECTYQhHi6UU8OfsYuB0hry+WRF18bPDpz2ljPXQk/Y74XwCT5Q=
