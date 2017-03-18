@@ -3,5 +3,5 @@
 Building a Tic-Tac-Toe game to learn ReactJS + Redux + TDD + Travis CLI
 
 ## TODO
-* Travis CLI
+* Travis CI
 * Multiplayer
