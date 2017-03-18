@@ -4,6 +4,7 @@ node_js:
 - '5'
 deploy:
   provider: heroku
+  app: tactoetic
   buildpack: https://github.com/mars/create-react-app-buildpack.git
   on: master
   api_key:
