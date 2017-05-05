@@ -9,7 +9,11 @@ export default class Status extends React.Component {
     let message;
 
     if (this.props.winner && this.props.winner.player) {
-      message = "Winner: " + this.props.winner.player;
+      if (this.props.player === this.props.winner.player) {
+        message = "You win!";
+      } else {
+        message = "You lose (-_-)";
+      }
     } else {
       message = "It's a draw!"
     }
@@ -21,7 +25,7 @@ export default class Status extends React.Component {
     this.props.newGame();
   }
 
-  render() {
+  status() {
     let status = null;
     if (this.gameEnded()) {
       status = (
@@ -31,11 +35,22 @@ export default class Status extends React.Component {
         </div>
       );
     } else {
-      status = <h1 className="current-player">Player Turn: {this.props.nextPlayer}</h1>;
+      let player = (this.props.nextPlayer === this.props.player ? 'Your turn' : 'Opponents turn')
+      status = (
+        <div>
+          <h2>You are: {this.props.player}</h2>
+          <h1 className="current-player">{player}</h1>
+        </div>
+      )
     }
+
+    return status;
+  }
+
+  render() {
     return (
       <div id="status-container">
-        {status}
+        {this.status()}
       </div>
     );
   }
